@@ -1,0 +1,76 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "app.checkinfood"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "app.checkinfood"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "app.checkinfood"
+        }
+    }
+}
