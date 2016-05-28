@@ -5,25 +5,17 @@ angular.module('app')
     {
         $id = $result.text;
         console.log($id);
-        var db = window.sqlitePlugin.openDatabase({name: 'checkinfood.db', location: 'database/'}, 
-        function(success)
+        var db = window.sqlitePlugin.openDatabase({name: 'food.db', location: 'default'});
+        db.executeSql("select * from product", [], function(res) 
         {
-            db.executeSql("select COUNT(*) from product", [], function(res) 
-            {
-                console.log("POUUUUULE");
-                console.log(JSON.stringify(res));
-            },
-            function(error)
-            {
-                console.log(":(")
-                console.log(error.message);
-            }); 
+            console.log("POUUUUULE");
+            console.log(JSON.stringify(res));
         },
-        function(err)
+        function(error)
         {
-             console.log("err");
+            console.log(":(")
+            console.log(error.message);
         });
-             
     }
     return {
         showScanner: function($scope) 
