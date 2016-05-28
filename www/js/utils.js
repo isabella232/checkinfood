@@ -1,23 +1,30 @@
 angular.module('app')
 .factory('$utils', function($state, $ionicPlatform)
 {
+    var currentProduct = {};
     function showProduct($result)
     {
         var id = $result.text;
-        console.log(id);
+        console.log("Scanned product id " +  id);
         var db = window.sqlitePlugin.openDatabase({name: 'food.db', location: 'default'});
         db.executeSql("select * from product where id = " + id, [], function(res) 
         {
-            console.log("POUUUUULE");
-            console.log(JSON.stringify(res.rows.item(0)));
+            currentProduct = res.rows.item(0);
+            console.log(JSON.stringify(currentProduct));
+            
+            $state.go("product");
         },
         function(error)
         {
-            console.log(":(")
+            console.log("error in select :")
             console.log(error.message);
         });
     }
     return {
+        getCurrentProduct: function()
+        {
+            return currentProduct;
+        },
         showScanner: function($scope) 
         {
             cordova.plugins.barcodeScanner.scan

@@ -9,7 +9,8 @@ angular.module('app')
             (
                 function(tx) 
                 {
-                    //tx.executeSql("CREATE TABLE `product` (`id` TEXT,`name` TEXT,`category` TEXT,`salt`	NUMERIC,`sugar`	REAL,`fat` REAL,`saturatedFattyAcids`	REAL,`additives` TEXT, `filter` INTEGER);");
+                    tx.executeSql("DROP TABLE `product`");
+                    tx.executeSql("CREATE TABLE `product` (`id` TEXT,`name` TEXT,`category` TEXT,`salt`	NUMERIC,`sugar`	REAL,`fat` REAL,`saturatedFattyAcids`	REAL,`additives` TEXT, `filter` INTEGER);");
                     tx.executeSql("INSERT INTO 'product' ( 'id','name','category','salt','sugar','fat','saturatedFattyAcids','additives','filter' ) VALUES ( '5010994923372','Coca cola 1.5L','soda','0','10.6','0.0','0.0','E338 E155d','0' )");
                 }, 
                 function(error)

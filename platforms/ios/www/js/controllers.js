@@ -8,12 +8,21 @@ angular.module('app.controllers', [])
     }
 })
    
-.controller('productCtrl', function($scope,$utils) 
+.controller('productCtrl', function($scope,$utils, $state) 
 {
+    console.log("product controller");
+    
     $scope.scan = function() 
     {
         $utils.showScanner($scope);
     }
-    console.log($scope.barcode);
+    
+    $scope.back = function()
+    {
+        $state.go("scanner");
+    }  
+    
+    productName = $utils.getCurrentProduct().name;
+    console.log("productName: " + productName);
 })
  
