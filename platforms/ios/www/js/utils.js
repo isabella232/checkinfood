@@ -1,7 +1,9 @@
 angular.module('app')
 .factory('$utils', function($state, $ionicPlatform)
 {
-    var currentProduct = {};
+    var currentProduct     = {};
+    var recommendedProduct = {};
+    
     function showProduct($result)
     {
         var id = $result.text;
@@ -10,20 +12,34 @@ angular.module('app')
         db.executeSql("select * from product where id = " + id, [], function(res) 
         {
             currentProduct = res.rows.item(0);
-            console.log(JSON.stringify(currentProduct));
+            console.log(currentProduct.category);
             
-            $state.go("product");
+            db.executeSql("select * from product where category = '" + currentProduct.category + "'", function(res2)
+            {
+                recommendedProduct = res2.rows.item(0);
+                console.log(recommendedProduct);
+                $state.go("product");
+            },
+            function(error)
+            {
+                console.log("error in select :")
+                console.log(error.message);
+            });               
         },
-        function(error)
+        function(errorPig)
         {
             console.log("error in select :")
-            console.log(error.message);
+            console.log(errorPig.message);
         });
     }
     return {
         getCurrentProduct: function()
         {
             return currentProduct;
+        },
+        getRecommendedProduct: function()
+        {
+            return recommendedProduct;
         },
         showScanner: function($scope) 
         {

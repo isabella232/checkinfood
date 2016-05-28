@@ -10,9 +10,12 @@ angular.module('app')
                 function(tx) 
                 {
                     tx.executeSql("DROP TABLE `product`");
-                    tx.executeSql("CREATE TABLE `product` (`id` TEXT,`name` TEXT,`category` TEXT,`salt`	NUMERIC,`sugar`	REAL,`fat` REAL,`saturatedFattyAcids`	REAL,`additives` TEXT, `filter` INTEGER);");
-                    tx.executeSql("INSERT INTO 'product' ( 'id','name','category','salt','sugar','fat','saturatedFattyAcids','additives','filter' ) VALUES ( '5010994923372','Coca cola 1.5L','soda','0','10.6','0.0','0.0','E338 E155d','0' )");
-                    
+                    tx.executeSql("CREATE TABLE `product` (`id` TEXT,`name` TEXT,`grade` TEXT,`category` TEXT,`ings` TEXT,`imgurl` TEXT,`salt`	NUMERIC,`sugar`	REAL,`fat` REAL,`saturatedFattyAcids` REAL,`additives` TEXT, `filter` INTEGER);");
+  
+                    tx.executeSql("INSERT INTO 'product' ( 'id','name','category','salt','sugar','fat','saturatedFattyAcids','additives','filter', 'ings', 'grade', 'imgurl') VALUES ( '3596710400881','LA Lasagne chèvre épinards','lasagne','0.83','0.5','7.4','3.2','E331 E452 E407','0', 'Fromage de chèvre, épinards, pâtes fraîches', 'C', 'http://static.openfoodfacts.org/images/products/359/671/040/0881/front_fr.6.400.jpg')");
+
+                    tx.executeSql("INSERT INTO 'product' ( 'id','name','category','salt','sugar','fat','saturatedFattyAcids','additives','filter', 'ings', 'grade', 'imgurl') VALUES ( '3222472475866','Lasagnes Chèvre-Épinards','lasagne','0.66','1.9','7.5','3.9','E300 E471 E330 E509','0', 'Fromage de chèvre, épinards, pâtes fraîches', 'B', 'http://static.openfoodfacts.org/images/products/322/247/247/5866/front_fr.8.400.jpg')");
+                                        
                     tx.executeSql("DROP TABLE Additifs");
                     tx.executeSql("CREATE TABLE Additifs(Nom TEXT,Malus INTEGER);");
                     tx.executeSql("INSERT INTO 'Additifs' ( 'Nom', 'Malus') VALUES('E100',0)");

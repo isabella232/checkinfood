@@ -24,9 +24,8 @@ angular.module('app.controllers', [])
     
     $scope.$on('$stateChangeSuccess', function(event)
     {
-        $scope.productName = $utils.getCurrentProduct().name; 
+        $scope.productName = $utils.getCurrentProduct() == undefined ? "" : $utils.getCurrentProduct().name; 
     });      
-    
     
     //console.log("productName: " + productName);
 })
