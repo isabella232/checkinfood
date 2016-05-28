@@ -20,9 +20,14 @@ angular.module('app.controllers', [])
     $scope.back = function()
     {
         $state.go("scanner");
-    }  
+    }
     
-    productName = $utils.getCurrentProduct().name;
-    console.log("productName: " + productName);
+    $scope.$on('$stateChangeSuccess', function(event)
+    {
+        $scope.productName = $utils.getCurrentProduct().name; 
+    });      
+    
+    
+    //console.log("productName: " + productName);
 })
  
