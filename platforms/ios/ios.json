@@ -1,0 +1,39 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "swtours.checkinfood"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+            "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+            "pluginId": "phonegap-plugin-barcodescanner",
+            "clobbers": [
+                "cordova.plugins.barcodeScanner"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "phonegap-plugin-barcodescanner": "5.0.0"
+    }
+}
