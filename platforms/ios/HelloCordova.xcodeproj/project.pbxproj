@@ -49,6 +49,8 @@
 		3827C9FEB0CD464EA4E1DA79 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8739EE341B1E485BB10901B9 /* QuartzCore.framework */; };
 		61ACDC82556E4C2E9309C07D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF0AE2CB01949CC8D917CDC /* CoreImage.framework */; };
 		06E900DAC09B4D60A5BA9008 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99574EDAAE649DEAB9D897B /* AudioToolbox.framework */; };
+		BE78F24B91B14EC4A5F335A6 /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F67DCF3AF9244A0A4ED7B41 /* SQLitePlugin.m */; };
+		EC3390B34EA64407B440C8BA /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = CC1F683BEF574793A1A9135C /* sqlite3.c */; settings = {COMPILER_FLAGS = "-DSQLITE_TEMP_STORE=2 -DSQLITE_THREADSAFE=2 -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_RTREE -DSQLITE_LOCKING_STYLE=1 -DSQLITE_OMIT_BUILTIN_TEST -DSQLITE_OMIT_LOAD_EXTENSION"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,10 @@
 		8739EE341B1E485BB10901B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		3EF0AE2CB01949CC8D917CDC /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreImage.framework"; path = "System/Library/Frameworks/CoreImage.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		B99574EDAAE649DEAB9D897B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		2F67DCF3AF9244A0A4ED7B41 /* SQLitePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SQLitePlugin.m"; path = "cordova-sqlite-storage/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		CC1F683BEF574793A1A9135C /* sqlite3.c */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = "sqlite3.c"; path = "cordova-sqlite-storage/sqlite3.c"; sourceTree = "<group>"; fileEncoding = 4; };
+		7852114889E44E2B9B95634E /* SQLitePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SQLitePlugin.h"; path = "cordova-sqlite-storage/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		AD10687365454BD78B3AA94F /* sqlite3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "sqlite3.h"; path = "cordova-sqlite-storage/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +244,10 @@
 				35BAAE405F5A4BF1AE7BD428 /* CDVBarcodeScanner.mm */,
 				A29C9C5488C74477880C1A2A /* zxing-all-in-one.cpp */,
 				C042BBDDBC9A48539E7E5633 /* zxing-all-in-one.h */,
+				2F67DCF3AF9244A0A4ED7B41 /* SQLitePlugin.m */,
+				CC1F683BEF574793A1A9135C /* sqlite3.c */,
+				7852114889E44E2B9B95634E /* SQLitePlugin.h */,
+				AD10687365454BD78B3AA94F /* sqlite3.h */,
 			);
 			name = Plugins;
 			path = HelloCordova/Plugins;
@@ -431,6 +441,8 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				7F69AE0385CE4D2B9A1A4BE7 /* CDVBarcodeScanner.mm in Resources */,
 				BBF47A5D012843398F2E1C36 /* zxing-all-in-one.cpp in Resources */,
+				BE78F24B91B14EC4A5F335A6 /* SQLitePlugin.m in Sources */,
+				EC3390B34EA64407B440C8BA /* sqlite3.c in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

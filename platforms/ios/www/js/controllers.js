@@ -15,6 +15,5 @@ angular.module('app.controllers', [])
         $utils.showScanner($scope);
     }
     console.log($scope.barcode);
-    //document.getElementById("product-heading3").textContent = $scope.barcode;
 })
  

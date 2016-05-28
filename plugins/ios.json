@@ -9,6 +9,9 @@
     "installed_plugins": {
         "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "swtours.checkinfood"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "swtours.checkinfood"
         }
     },
     "dependent_plugins": {}
