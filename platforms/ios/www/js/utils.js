@@ -12,12 +12,12 @@ angular.module('app')
         db.executeSql("select * from product where id = " + id, [], function(res) 
         {
             currentProduct = res.rows.item(0);
-            console.log(currentProduct.category);
+            console.log(currentProduct.id);
             
-            db.executeSql("select * from product where category = '" + currentProduct.category + "'", function(res2)
+            db.executeSql("select * from product where category = '" + currentProduct.category + "' and grade < '" + currentProduct.grade + "'", [], function(res2)
             {
                 recommendedProduct = res2.rows.item(0);
-                console.log(recommendedProduct);
+                console.log(recommendedProduct.id);
                 $state.go("product");
             },
             function(error)

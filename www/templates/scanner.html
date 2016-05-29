@@ -1,18 +1,14 @@
 <ion-view title="Scanner" hide-nav-bar="true" id="page1" class=" ">
-    <link rel="stylesheet" href="../stylesheets/scanner.css" />
-    <ion-content padding="true" class="manual-ios-statusbar-padding" scroll="false">
+    <link rel="stylesheet" href="stylesheets/scanner.css" />
+    <ion-content id="scanner" padding="true" class="manual-ios-statusbar-padding" scroll="false">
         <div id="scanner-heading2">
-            <img id="logo" src="../images/logo.png" />
+            <img id="logo" src="images/logo.png" />
         </div>
         <div id="explanation">
-            <img id="help" src="../images/main.png" />
-        </div>
-        <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
-            <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+            <img id="help" src="images/main.png" />
         </div>
         <div id="scan-zone">
-            <img id="scanner-button4" src="../images/boutton.png" class=" button button-positive button-block icon icon-ios-camera-outline" ng-click="scan()" />
+            <img id="scanner-button4" src="images/boutton.png" ng-click="scan()" />
         </div>
-        <!--<button id="scanner-button4" class=" button button-positive  button-block icon ion-ios-camera-outline" ng-click="scan()"> Scan</button>-->
     </ion-content>
 </ion-view>

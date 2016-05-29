@@ -19,12 +19,15 @@ angular.module('app.controllers', [])
     
     $scope.back = function()
     {
+        console.log('test');
         $state.go("scanner");
     }
     
     $scope.$on('$stateChangeSuccess', function(event)
     {
-        $scope.productName = $utils.getCurrentProduct() == undefined ? "" : $utils.getCurrentProduct().name; 
+        $scope.productName  = $utils.getCurrentProduct() == undefined ? "" : $utils.getCurrentProduct().name;
+        $scope.productGrade = $utils.getCurrentProduct() == undefined ? "Z" : $utils.getCurrentProduct().grade;
+        document.getElementById('jauge').src = 'images/'+$scope.productGrade+'.png';
     });      
     
     //console.log("productName: " + productName);

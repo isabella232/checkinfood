@@ -1,7 +1,26 @@
 <ion-view title="product" hide-nav-bar="true" id="page2" class=" ">
+    <link rel="stylesheet" href="stylesheets/product.css" />
     <ion-content id="product" padding="true" class="manual-ios-statusbar-padding">
-        <h1 id="product-heading3" style="color:#000000;" class=" " ng-model="productName"> {{productName}}</h1>
-        <form id="product-form2" class="list ">
+        <div id="product-heading3">
+            <img src="images/flechegauche.png" />
+            <h1 id="ProductName" ng-model="productName">{{productName}}</h1>
+        </div>
+        <div id="jaugeContainer">
+            <h1 id="ProductNote" ng-model="productGrade">{{productGrade}}</h1>
+            <img id="jauge" src="images/A.png" />
+        </div>
+        <div id="BetterLabel">
+            Meilleures propositions
+        </div>
+        <div id="BetterProduct">
+            <label ng-model="recommendedName">Lasagnes Chèvre-Épinards</label>
+            <img src="images/epinard.png" />
+        </div>
+        <div id="details">
+            <label>détails</label>
+        </div>
+        <img id="showDetails" src="images/flechebas.png" />
+        <!--<form id="product-form2" class="list ">
             <ion-item class="range range-balanced " id="product-range2">100
                 <input type="range" value="50" min="0" max="100" name="productValue">
             </ion-item>
@@ -18,7 +37,7 @@
                 <i class="icon ion-ios-flame-outline"></i>
             </ion-item>
             <ion-item class="assertive  " id="product-list-item7" ui-sref="scanner">E250 - Nitrite de sodium</ion-item>
-        </form>
-        <button id="product-button5" class=" button button-positive  button-block icon"ng-click="back()"> Retour</button>
+        </form>-->
+        <!--<button id="product-button5" class=" button button-positive  button-block icon" ng-click="back()"> Retour</button>-->
     </ion-content>
 </ion-view>
